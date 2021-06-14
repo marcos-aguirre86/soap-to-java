@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?><!--File AR.Interface_AP_v1.2MessageSet\ar\com\supervielle\www\wsdl\servicios\integracion\analisisriesgosv1\AnalisisRiesgos_Svc-v1.wsdl, application AR.Interface_AP_v1.2--><wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" targetNamespace="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:ns="http://www.supervielle.com.ar/xsd/Integracion/Header-v1" xmlns:ns1="http://www.supervielle.com.ar/xsd/Integracion/common/commonTypes-v1" xmlns:ns10="http://www.supervielle.com.ar/xsd/Integracion/analisisRiesgos/ejecutarControles-v1" xmlns:ns11="http://www.supervielle.com.ar/xsd/Integracion/analisisRiesgos/consultaListasNegras-v1" xmlns:ns12="http://www.supervielle.com.ar/xsd/Integracion/analisisRiesgos/consultaEntidadesLiquidadas-v1" xmlns:ns13="http://www.supervielle.com.ar/xsd/Integracion/analisisRiesgos/consultaSituacionBCRA-v1" xmlns:ns15="http://www.supervielle.com.ar/xsd/Integracion/analisisRiesgos/consultaMorosos-v1" xmlns:ns16="http://www.supervielle.com.ar/xsd/Integracion/analisisRiesgos/consultaScoringSupervielle-v1" xmlns:ns2="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1" xmlns:ns3="http://www.supervielle.com.ar/xsd/servicios/integracion/exception-v1" xmlns:ns4="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1" xmlns:ns5="http://www.supervielle.com.ar/xsd/Integracion/analisisRiesgos/consultaIndeseables-v1" xmlns:ns6="http://www.supervielle.com.ar/xsd/Integracion/analisisRiesgos/consultaInhabilitadosBCRA-v1" xmlns:ns7="http://www.supervielle.com.ar/xsd/Integracion/analisisRiesgos/consultaListasInformados-v1" xmlns:ns8="http://www.supervielle.com.ar/xsd/Integracion/analisisRiesgos/consultaReportesOnline-v1" xmlns:ns9="http://www.supervielle.com.ar/xsd/Integracion/analisisRiesgos/consultaSACNOSIS-v1" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<wsdl:documentation>
+		<wsdl:appinfo source="WMQI_APPINFO">
+			<MRWSDLAppInfo imported="true">
+				<binding hasEncoding="false" imported="true" name="analisisRiesgosBinding_v1.2" originalBindingStyle="document"/>
+				<binding hasEncoding="false" imported="false" name="analisisRiesgosBinding" originalBindingStyle="document"/>
+				<binding hasEncoding="false" imported="false" name="analisisRiesgosBinding_v1" originalBindingStyle="document"/>
+			</MRWSDLAppInfo>
+		</wsdl:appinfo>
+	</wsdl:documentation>
+	<wsdl:import location="http://spvsoa.gscorp.ad:7817/wsdl/servicios/integracion/analisisRiesgos-v1.2?wsdl=wsdl0" namespace="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1"/>
+	<wsdl:types>
+		<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" targetNamespace="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1"/>
+	</wsdl:types>
+	<wsdl:binding name="analisisRiesgosBinding" type="tns:analisisRiesgosPortType_v1">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="consultaReportesOnline">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/consultaReportesOnline"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqConsultaReportesOnline" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespConsultaReportesOnline" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaListasInformados">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/consultaListasInformados"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqConsultaListasInformados" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespConsultaListasInformados" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaSACNOSIS">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/consultaSACNOSIS"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqConsultaSACNOSIS" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespConsultaSACNOSIS" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="ejecutarControles">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/ejecutarControles"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqEjecutarControles" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespEjecutarControles" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaIndeseables">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/consultaIndeseables"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqConsultaIndeseables" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespConsultaIndeseables" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaInhabilitadosBCRA">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/consultaInhabilitadosBCRA"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqConsultaInhabilitadosBCRA" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespConsultaInhabilitadosBCRA" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaListasNegras">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/consultaListasNegras"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqConsultaListasNegras" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespConsultaListasNegras" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaEntidadesLiquidadas">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/consultaEntidadesLiquidadas"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqConsultaEntidadesliquidadas" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespConsultaEntidadesliquidadas" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaSituacionBCRA">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/consultaSituacionBCRA"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqConsultaSituacionBCRA" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespConsultaSituacionBCRA" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaMorosos">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/consultaMorosos"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqConsultaMorosos" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespConsultaMorosos" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaScoringSupervielle">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/consultaScoringSupervielle"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqConsultaScoringSupervielle" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespConsultaScoringSupervielle" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaVeraz">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/consultaVeraz"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqConsultaVeraz" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespConsultaVeraz" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaTransacciones">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/consultatransacciones-v1"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqConsultaTransacciones" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespConsultaTransacciones" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="aceptacionCrediticia">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/aceptacionCrediticia-v1"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqAceptacionCrediticia" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespAceptacionCrediticia" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaScore">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/consultaScore-v1"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqConsultaScore" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespConsultaScore" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="evaluacionFactoringCheques">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/evaluacionFactoringCheques-v1"/>
+			<wsdl:input>
+				<soap:body parts="entreda" use="literal"/>
+				<soap:header message="tns:ReqEvaluacionFactoringCheques" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespEvaluacionFactoringCheques" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="validarIdentidadVeraz">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/validarIdentidadVeraz-v1"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqValidarIdentidadVeraz" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespValidarIdentidadVeraz" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="validarCuestionarioVeraz">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/validarCuestionarioVeraz-v1"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqValidarCuestionarioVeraz" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespValidarCuestionarioVeraz" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaVerazExperto">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/consultaVerazExperto-v1"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqConsultaVerazExperto" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespConsultaVerazExperto" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaEmpresasRechazadas">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/consultaEmpresasRechazadas-v1"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqConsultaEmpresasRechazadas" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespConsultaEmpresasRechazadas" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="analisisRiesgosBinding_v1" type="tns:analisisRiesgosPortType_v1.1">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="ejecutarControles">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/ejecutarControles"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqEjecutarControles_v1.1" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespEjecutarControles_v1.1" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaSituacionBCRA">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/consultaSituacionBCRA"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqConsultaSituacionBCRA_v1.1" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespConsultaSituacionBCRA_v1.1" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="consultaListasInformados">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/consultaListasInformados"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqConsultaListasInformados_v1.1" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespConsultaListasInformados_v1.1" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="aceptacionCrediticia">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/aceptacionCrediticia-v1.1"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqAceptacionCrediticia_v1.1" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespAceptacionCrediticia_v1.1" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:binding name="analisisRiesgosBinding_v1.2" type="tns:analisisRiesgosPortType_v1.2">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="consultaSituacionBCRA">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1/consultaSituacionBCRA"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqConsultaSituacionBCRA_v1.2" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespConsultaSituacionBCRA_v1.2" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="aceptacionCrediticia">
+			<soap:operation soapAction="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v12/aceptacionCrediticia"/>
+			<wsdl:input>
+				<soap:body parts="entrada" use="literal"/>
+				<soap:header message="tns:ReqAceptacionCrediticia_v1.2" part="header" use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body parts="salida" use="literal"/>
+				<soap:header message="tns:RespAceptacionCrediticia_v1.2" part="header" use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="soaException">
+				<soap:fault name="soaException" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+	</wsdl:binding>
+	<wsdl:service name="AnalisisRiesgos">
+		<wsdl:port binding="tns:analisisRiesgosBinding" name="AnalisisRiesgosSvc">
+			<soap:address location="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1"/>
+		</wsdl:port>
+		<wsdl:port binding="tns:analisisRiesgosBinding_v1" name="AnalsisRiesgosSvc_v1.1">
+			<soap:address location="http://www.supervielle.com.ar/wsdl/servicios/integracion/analisisRiesgos-v1.1"/>
+		</wsdl:port>
+		<wsdl:port binding="tns:analisisRiesgosBinding_v1.2" name="AnalsisRiesgosSvc_v1.2">
+			<soap:address location="http://spvsoa.gscorp.ad:7817/wsdl/servicios/integracion/analisisRiesgos-v1.2"/>
+		</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
